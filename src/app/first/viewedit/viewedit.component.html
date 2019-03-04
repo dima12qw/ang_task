@@ -1,0 +1,21 @@
+<div class="row">
+  <form (ngSubmit)="onSubmit()" #itemForm="ngForm">
+    <div class="form-control-group">
+      <label for="id">Id</label>
+      <input type="text" [(ngModel)]="item.id" class="form-control" id="id" placeholder="Id" name="id" #id="ngModel">
+    </div>
+    <div class="form-control-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="item.name" class="form-control" id="name" placeholder="Name" name="name" #name="ngModel">
+    </div>
+    <div class="form-control-group">
+      <label for="description">Description</label>
+      <input type="text" [(ngModel)]="item.description" class="form-control" id="description" placeholder="Description" name="description" #description="ngModel">
+    </div>
+    <div class="form-control-group">
+      <input type="checkbox" class="form-check-input" id="active" name="active" [(ngModel)]="item.active" #active="ngModel">
+      <label class="form-check-label" for="active">Active</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

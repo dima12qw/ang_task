@@ -1,0 +1,32 @@
+button{
+  margin: 0 auto;
+}
+
+.container-fluid{
+  border: 1px solid;
+  /*min-height: 100vh;*/
+}
+
+.bordered-nav{
+  border: 1px solid;
+  border-radius: 25px;
+}
+
+.comp-routes{
+  border: 1px solid;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  height: 80%;
+
+}
+
+.top5{
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.down5{
+  margin-bottom: 5px;
+}

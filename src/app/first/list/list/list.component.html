@@ -1,0 +1,37 @@
+<div class="row">
+  <button class="btn btn-success" (click)="navAdd()">Add</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Active</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of items">
+    <tr>
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.description}}</td>
+      <td><input class="form-check-input" type="checkbox" [checked]="item.active" id="defaultCheck2" disabled></td>
+      <td>
+        <a (click)="openModal(item.id)">View</a>
+        <a (click)="navEdit(item.id)">Edit</a>
+        <a (click)="onDelete(item.id)">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<ngx-smart-modal #myModal identifier="myModal" *ngIf="item">
+  <h1>View</h1>
+  <b>Id: </b>{{item.id}}<br>
+  <b>Name: </b>{{item.name}}<br>
+  <b>Description: </b>{{item.description}}<br>
+
+  <button (click)="myModal.close()">Close</button>
+</ngx-smart-modal>
